@@ -1,0 +1,165 @@
+@charset "UTF-8";
+:root{
+    --cor1: #f00;
+    --cor2: rgb(143, 0, 0);
+    --cor3: rgb(141, 141, 141);
+    --cor4: white;
+    --cor5: lightgray;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+aside{
+    background-color: gray;
+    
+}
+
+div.camposform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form.formsugestao{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.formsugestao > h2{
+    text-align: center;;
+}
+
+form.formsugestao input{
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+form.formsugestao textarea{
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+form.formsugestao button{
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+span.iconefechar {
+    display: none;
+}
+
+input.menuburguer:checked ~ form.formsugestao{
+    display: flex;
+}
+
+input.menuburguer:checked + label>span.iconelampada {
+    display: none;
+}
+
+input.menuburguer:checked + label>span.iconefechar {
+    display: inline;
+}
+
+input.menuburguer{
+    display: none;
+}
+
+section.opcaolanche{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor5);
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.541);
+}
+
+section.opcaolanche img{
+    width: 150px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: 10px;
+}
+
+ul.ingredienteslanche{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.ingredienteslanche > li{
+    margin: 5px;
+    padding: 2px;
+    background-color: var(--cor3);
+    border-radius: 10px;
+    color: white;
+}
+
+div.precolanche{
+    display: flex;
+    align-items: center;
+}
+
+div.precolanche > p{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+div.descricaolanche{
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    label{
+        display: none;
+    }
+    form.formsugestao{
+        display: flex;
+    }
+    aside{
+        grid-column: 2/3;
+    }
+    article{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+}
+

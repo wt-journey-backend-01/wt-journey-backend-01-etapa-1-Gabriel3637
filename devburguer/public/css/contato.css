@@ -1,0 +1,55 @@
+@charset "UTF-8";
+:root{
+    --cor1: #f00;
+    --cor2: rgb(143, 0, 0);
+    --cor3: rgb(141, 141, 141);
+    --cor4: white;
+    --cor5: lightgray;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+form.formcontato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: lightgray;
+    height: 100%;
+}
+form.formcontato > h1{
+    width: 98%;
+    margin: 10px 0px;
+    text-align: center;
+}
+form.formcontato > input{
+    width: 98%;
+    margin-bottom: 10px;
+    border: none;
+}
+form.formcontato > textarea{
+    resize: none;
+    width: 98%;
+    border: none;
+}
+form.formcontato > button{
+    width: 98%;
+    margin-top: 10px;
+}
